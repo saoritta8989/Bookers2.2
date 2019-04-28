@@ -8,7 +8,7 @@ class User < ApplicationRecord
          has_many :favorites, dependent: :destroy
          has_many :books, dependent: :destroy
          attachment :profile_image
-		     validates :username, presence: true, uniqueness:true
+		     validates :username, presence: true, uniqueness:true, length: { maximum: 20}
 
 		 def email_required?
           false
