@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_out_path_for(resource)
+  	flash[:notice] =  "Book was succesfully"
     root_path
   end
 
