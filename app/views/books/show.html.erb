@@ -1,5 +1,5 @@
 
-	<%= render 'books/list', book: @book %>
+	<%= render 'books/list', book: @book, user: current_user %>
 
 <div class="col-md-9">
 
@@ -12,11 +12,12 @@
 　　　　　　　<td><%= @books.title %></td>
 			<td><%= @books.body %></td>
 			<% if @books.user == current_user %>
-			<td><%= link_to "Edit" ,edit_book_path(@books.id) ,class: "btn btn-success dropdown-toggle edit_#{@books.id}"%></td>
-			<td><%= link_to "Destroy", book_path(@books.id), method: :delete ,class: "btn btn-danger dropdown-toggle destroy_book_#{@books.id}", "data-confirm" => "本当に削除しますか？" %></td>
+			<td><%= link_to "Edit" ,edit_book_path(@books.id) ,class: "edit_#{@books.id} btn btn-success dropdown-toggle" %></td>
+			<td><%= link_to "Destroy", book_path(@books.id), method: :delete ,class: "destroy_book_#{@books.id} btn btn-danger dropdown-toggle", "data-confirm" => "本当に削除しますか？" %></td>
 		</tr>
 	  <% end %>
 	</tbody>
 </table>
+<%= link_to @books.user.username,user_path(@books.user) %>
 </div>
 </div>

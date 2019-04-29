@@ -14,15 +14,15 @@
 	 <h1>User info</h1>
     
      <h4>Name</h4>
-        <%= f.text_field :username, autofocus: true,  placeholder:"Name" %>
+        <%= f.text_field :username, autofocus: true,  placeholder:"Name", class: "name" %>
 
     
     <h4>image</h4>
-      <%= f.attachment_field :profile_image, placeholder: "image", class: "user-edit-form" %>
+      <%= f.attachment_field :profile_image, placeholder: "image", class: "user_image" %>
 
 
     <h4>Introduction</h4>
-      <%= f.text_area :introduction, class: "introduction" %>
+      <%= f.text_field :introduction, class: "introduction" %>
 	  <%= f.submit 'Update Book' %>
 
 <% end %>

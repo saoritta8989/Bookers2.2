@@ -4,12 +4,12 @@
    
   <div class="field">
     <%= f.label :username %><br />
-    <%= f.text_field :username, autocomplete: "name" %></div>
+    <%= f.text_field :username, autocomplete: "name", class: "name" %></div>
 
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autocomplete: "current-password", class: "password" %>
   </div>
 
   <% if devise_mapping.rememberable? %>

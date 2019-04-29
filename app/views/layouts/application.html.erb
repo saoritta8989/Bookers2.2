@@ -30,7 +30,7 @@
 
     <% if user_signed_in? %>
         <li class="list">
-           <%= link_to "Home", books_path, class: "home glyphicon glyphicon-home" %>
+           <%= link_to "Home", user_path(current_user), class: "home glyphicon glyphicon-home" %>
          </li>
 
          <li class="list">
